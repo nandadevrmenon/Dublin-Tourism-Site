@@ -1,0 +1,37 @@
+CSS
+
+main.css that imports other css
+    
+css
+|-- main.css
+|-- general_design.css
+|-- animations.css
+`-- some_lengthy_stuff.css
+
+
+
+HTML
+I think that our index.html should be the home page, 
+and use pages/ for the next ones.
+
+I've checked the <base> element to make all the html files
+share the same path, so we can link to other files using the 
+same paths for both index.html and pages/whatever.html
+I want to ask Ruari if it is a good practice because I've never seen that.
+
+I like the svgs, but I found that they didn't have the same width.
+do you think that we should change fix that? 
+I added another facebook logo that shares the width with twitter and instagram
+
+Page design
+    HOME <index.html> or <pages/home.html>
+    HEADER like https://myseoulbox.com/
+        
+
+Javascript
+we will probably have to implement some fancy behaviours to increase marks some ideas:
+    - smooth scrolling to go top and bottom of the page or sections | instead of using <a href="to some ID">
+    - the hamburger menu
+    - 
+
+

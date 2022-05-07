@@ -1,6 +1,12 @@
 @import 'general_design.css';
 @import 'animations.css';
 
-social_icon{
-  fill:red;
-}
+/* the icons thing, I don't know if you were thinking on having the background black and */  
+/* the icon itself red, but with our current svgs it won't be possible because they are */ 
+/* like a hole, so we get the color from the background, I can try to generate a svg */ 
+/* with gimp that gives us does properties. I tried changing the background color of */ 
+/* each icon but feels dirty. */
+
+/* .social_icon { */
+/*     fill:red; */
+/* } */
