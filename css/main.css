@@ -18,6 +18,7 @@ header{
   width:100%;
   padding:1.4rem 0;
   transition:0.2s padding ease-in;
+  background-color: var(--page-pastel-green);
 }
 
 header nav{
@@ -32,16 +33,15 @@ header nav{
 
 .sticky{
   padding:0.6rem 0;
-  background-color: var(--page-green);
 }
 
-.sticky nav ul li{
+/* .sticky nav ul li{
   color:var(--page-white);
 }
 
 .sticky #brand{
 color: var(--page-white);
-}
+} */
 
 header nav ul{
   font-family: "Nunito",sans-serif;
@@ -69,12 +69,25 @@ header nav ul li{
 
 /* home main */
 #home_page > main {
+    padding-top: 5em;
     margin-bottom: 5em;
 }
 
+#home_page > main .banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+#home_page > main .banner h1{
+  font-family: "Maxi Round",cursive;
+  font-size: 40vh;
+  padding: 0;
+  margin: 0;
+}
 /* home main decoration section */
 #home_page > main section:first-child {
-    height: 90vh;
+    height: 150vh;
 }
 
 /* home main info section */
@@ -123,8 +136,8 @@ footer{
   grid-template-columns:1fr 1fr 1fr;
   font-family: "Nunito",sans-serif;
   padding: 1rem;
-  background-color: var(--page-olive);
-  color:var(--page-pastel-green);
+  background-color: var(--page-dark-green);
+  color:var(--page-white);
 }
 
 .footer_nav{
@@ -143,7 +156,7 @@ footer .nav_links{
 }
 
 .social_media_icons{
-  border-left: 1px solid var(--page-black);
+  border-left: 1px solid var(--page-pastel-green);
   display: flex;
   flex-flow:row nowrap;
   align-items: center;
@@ -155,6 +168,7 @@ footer .nav_links{
 .social_media_icons svg{
 margin:0 1rem;
 width:40px;
+fill:white;
 }
 
 .footer_links{
