@@ -7,10 +7,11 @@
 :root {
   --page-green: #1ea873;
   --page-white: #fff;
-  --page-orange:#EC7357;
+  --page-orange:#f0aa6c;
   --page-black :#000;
   --page-yellow:#EDB230;
-
+  --page-pastel-green:#b3e1cf;
+  --page-font-green:#01291a;
 
 
   --logo-font:"Maxi Round",cursive;
