@@ -27,7 +27,7 @@ header{
 header nav{
   display:flex;
   flex-flow:row nowrap;
-  align-items: centre;
+  align-items: center;
   justify-content: space-between;
   width: 80vw;
   margin:0 auto;
