@@ -106,6 +106,7 @@ width:40px;
 #home_page > main section:last-child > article {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 2em;
 }
 
@@ -132,5 +133,4 @@ width:40px;
 
 #home_page > main section:last-child > article > div button {
     margin-top: 2em;
-    /* align-self: start; left or centered?*/
 }
