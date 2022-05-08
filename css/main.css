@@ -16,10 +16,11 @@
 body{
   margin:0;
   padding:0;
+  background-color: var(--page-green);
+  color: var(--page-dark-green);
 }
 
 header{
-  background-color: var(--page-green);
   border-bottom: 2px solid var(--page-yellow);
   position:sticky;
 }
@@ -58,9 +59,57 @@ header nav ul li{
   color: var(--page-white);
 }
 
-
-#page_background{
-background-color: var(--page-green);
-height:400vh;
-
+/* main */
+#home_page > main {
+    margin-bottom: 5em;
 }
+
+/* decoration section */
+#home_page > main section:first-child {
+    height: 90vh;
+}
+
+/* info section */
+#home_page > main section:last-child {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#home_page > main section:last-child > article {
+    display: flex;
+    align-items: center;
+    padding: 2em;
+}
+
+#home_page > main section:last-child > article > figure {
+    flex-basis: 40%;
+    text-align: center;
+    min-width: 600px;
+}
+
+#home_page > main section:last-child > article > figure img {
+    max-width: 500px;
+}
+
+#home_page > main section:last-child > article > div {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home_page > main section:last-child > article > div p {
+    line-height: 1.5;
+}
+
+#home_page > main section:last-child > article > div button {
+    margin-top: 2em;
+    /* align-self: start; left or centered?*/
+}
+
+
+
+
+
+
+
