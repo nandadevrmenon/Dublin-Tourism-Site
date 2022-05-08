@@ -18,16 +18,20 @@ body{
   padding:0;
 }
 
-
+header{
+  background-color: var(--page-green);
+  border-bottom: 2px solid var(--page-yellow);
+  position:sticky;
+}
 
 header nav{
-  position:sticky;
   display:flex;
   flex-flow:row nowrap;
   align-items: centre;
   justify-content: space-between;
   width: 80vw;
   margin:0 auto;
+ 
 }
 
 header nav ul{
@@ -38,6 +42,7 @@ header nav ul{
   align-items: center;
   justify-content: space-evenly;
   font-size: 1rem;
+  color: var(--page-white);
 
 }
 
@@ -50,6 +55,7 @@ header nav ul li{
   font-family:"Koulen";
   font-size: 3rem;
   margin:-1rem;
+  color: var(--page-white);
 }
 
 
