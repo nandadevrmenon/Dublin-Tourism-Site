@@ -14,3 +14,15 @@ const observer = new IntersectionObserver((entries, observer) => {
 });
 
 observer.observe(decorationElement);
+
+
+
+
+
+///////FOR STICKY HEDAER/////////////////
+
+
+window.addEventListener("scroll",function(){
+  const header = document.querySelector("#home_page header");
+  header.classList.toggle("sticky",window.scrollY>0);
+})

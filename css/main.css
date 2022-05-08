@@ -5,23 +5,42 @@
 body{
   margin:0;
   padding:0;
-  background-color: var(--page-green);
+  background-color: var(--page-pastel-green);
   color: var(--page-font-green);
+  position:relative;
 }
 
 header{
   border-bottom: 2px solid var(--page-yellow);
-  position:-webkit-sticky;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:1.4rem 0;
+  transition:0.2s padding ease-in;
 }
 
 header nav{
+  position:relative;
   display:flex;
   flex-flow:row nowrap;
   align-items: center;
   justify-content: space-between;
   width: 80vw;
-  margin:0 auto;
- 
+  margin:0rem auto;
+}
+
+.sticky{
+  padding:0.6rem 0;
+  background-color: var(--page-green);
+}
+
+.sticky nav ul li{
+  color:var(--page-white);
+}
+
+.sticky #brand{
+color: var(--page-white);
 }
 
 header nav ul{
@@ -32,7 +51,7 @@ header nav ul{
   align-items: center;
   justify-content: space-evenly;
   font-size: 1rem;
-  color: var(--page-white);
+  color: var(--page-font-green);
 
 }
 
@@ -44,7 +63,7 @@ header nav ul li{
   font-family:"Koulen";
   font-size: 3rem;
   margin:-1rem;
-  color: var(--page-white);
+  color: var(--page-font-green);
 }
 
 footer{
@@ -52,7 +71,7 @@ footer{
   grid-template-columns:1fr 1fr 1fr;
   font-family: "Nunito",sans-serif;
   padding: 1rem;
-  background-color: var(--page-pastel-green);
+  background-color: var(--page-orange);
   color:var(--page-font-green);
 }
 
