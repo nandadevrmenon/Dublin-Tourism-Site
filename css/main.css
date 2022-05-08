@@ -21,7 +21,7 @@ body{
 header{
   background-color: var(--page-green);
   border-bottom: 2px solid var(--page-yellow);
-  position:sticky;
+  position:-webkit-sticky;
 }
 
 header nav{
@@ -63,4 +63,10 @@ header nav ul li{
 background-color: var(--page-green);
 height:400vh;
 
+}
+
+
+footer{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
 }
