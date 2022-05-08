@@ -1,0 +1,17 @@
+@font-face{
+  font-family:"Maxi Round";
+  src:url(../fonts/ABCMaxiRound-Bold.woff)format("woff");
+}
+
+
+:root {
+  --page-green: #1ea873;
+  --page-white: #fff;
+  --page-orange:#EC7357;
+  --page-black :#000;
+
+
+
+  --logo-font:"Maxi Round",cursive;
+}
+

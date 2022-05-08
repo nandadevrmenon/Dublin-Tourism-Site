@@ -1,5 +1,6 @@
 @import 'general_design.css';
 @import 'animations.css';
+@import 'colors.css';
 
 /* the icons thing, I don't know if you were thinking on having the background black and */  
 /* the icon itself red, but with our current svgs it won't be possible because they are */ 
@@ -10,3 +11,50 @@
 /* .social_icon { */
 /*     fill:red; */
 /* } */
+
+
+body{
+  margin:0;
+  padding:0;
+}
+
+
+
+header nav{
+  position:sticky;
+  display:flex;
+  flex-flow:row nowrap;
+  align-items: centre;
+  justify-content: space-between;
+  width: 80vw;
+  margin:0 auto;
+}
+
+header nav ul{
+  font-family: "Nunito",sans-serif;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1rem;
+
+}
+
+
+header nav ul li{
+  margin: 0 1rem;
+}
+
+#brand{
+  font-family:"Koulen";
+  font-size: 3rem;
+  margin:-1rem;
+}
+
+
+#page_background{
+background-color: var(--page-green);
+height:400vh;
+
+}
