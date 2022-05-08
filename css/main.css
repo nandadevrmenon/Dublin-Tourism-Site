@@ -94,7 +94,20 @@ width:40px;
 
 /* home main decoration section */
 #home_page > main section:first-child {
-    height: 90vh;
+    height: 200vh;
+}
+
+#home_page > main section:first-child > div:first-child {
+    height: 70%;
+}
+
+#home_page > main section:first-child > div:last-child {
+    height: 30%;
+    background-image: url(../images/guiness.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: 2s linear;
 }
 
 /* home main info section */

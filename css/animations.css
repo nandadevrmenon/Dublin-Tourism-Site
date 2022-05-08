@@ -1,0 +1,3 @@
+#home_page > main > section:first-child div.inverse {
+    transform: translateY(-60rem);
+}
