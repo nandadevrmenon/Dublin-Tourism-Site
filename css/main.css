@@ -16,7 +16,7 @@ header{
   top:0;
   left:0;
   width:100%;
-  padding:1.4rem 0;
+  padding:1rem 0;
   transition:0.2s padding ease-in;
   background-color: var(--page-pastel-green);
 }
@@ -31,8 +31,10 @@ header nav{
   margin:0rem auto;
 }
 
+
+
 .sticky{
-  padding:0.6rem 0;
+  padding:0rem 0;
 }
 
 /* .sticky nav ul li{
@@ -69,7 +71,7 @@ header nav ul li{
 
 /* home main */
 #home_page > main {
-    padding-top: 5em;
+    margin-top:5vh;
     margin-bottom: 5em;
 }
 
@@ -81,7 +83,7 @@ header nav ul li{
 }
 #home_page > main .banner h1{
   font-family: "Maxi Round",cursive;
-  font-size: 40vh;
+  font-size: 23vw;
   padding: 0;
   margin: 0;
 }
@@ -189,4 +191,32 @@ fill:white;
 
 .footer_links ul li{
   padding: 0 1rem;
+}
+
+
+.dropdown{
+  display:flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  max-height:0;
+  transition:0.4s;
+  opacity:0;
+  background-color: var(--page-pastel-dark-green);
+  z-index: 100;
+  border-top: 1px solid var(--page-yellow);
+  top:10vh;
+  width:100%;
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+.dropdown li{
+  font-family: "Nunito";
+}
+
+.show{
+  max-height: 100vh;
+  opacity:1;
 }
