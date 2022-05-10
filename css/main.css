@@ -78,12 +78,12 @@ header nav ul li{
 }
 
 #home_page > main section:first-child > div:first-child {
-    height: 70%;
+    /* height: 70%; */
 }
 
 #home_page > main section:first-child > div:last-child {
-    height: 30%;
-    background-image: url(../images/guiness.png);
+    /* height: 30%; */
+    /* background-image: url(../images/guiness2.png); */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
