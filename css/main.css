@@ -16,8 +16,9 @@ header{
   top:0;
   left:0;
   width:100%;
-  padding:1.4rem 0;
+  padding:1rem 0;
   transition:0.2s padding ease-in;
+  background-color: var(--page-pastel-green);
 }
 
 header nav{
@@ -30,18 +31,19 @@ header nav{
   margin:0rem auto;
 }
 
+
+
 .sticky{
-  padding:0.6rem 0;
-  background-color: var(--page-green);
+  padding:0rem 0;
 }
 
-.sticky nav ul li{
+/* .sticky nav ul li{
   color:var(--page-white);
 }
 
 .sticky #brand{
 color: var(--page-white);
-}
+} */
 
 header nav ul{
   font-family: "Nunito",sans-serif;
@@ -69,25 +71,32 @@ header nav ul li{
 
 /* home main */
 #home_page > main {
+    margin-top:5vh;
     margin-bottom: 5em;
 }
 
-/* home main decoration section */
-#home_page > main section:first-child {
-    height: 200vh;
+#home_page > main .banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
 }
-
+#home_page > main .banner h1{
+  font-family: "Maxi Round",cursive;
+  font-size: 23vw;
+  padding: 0;
+  margin: 0;
+}
+/* home main decoration section */
 #home_page > main section:first-child > div:first-child {
-    /* height: 70%; */
 }
 
 #home_page > main section:first-child > div:last-child {
-    /* height: 30%; */
-    /* background-image: url(../images/guiness2.png); */
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition: 2s linear;
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
+    /* background-position: center; */
+    /* transition: 2s linear; */
+    /* height: 150vh; */
 }
 
 /* home main info section */
@@ -104,10 +113,12 @@ header nav ul li{
     margin-bottom: 4em;
     opacity: 0;
     transition: 300ms;
+    /* it overlaps with the sticky nav otherwise */
     position: relative;
-    z-index: -1;
+    z-index: -1; 
 }
 
+/* article sliding effect */
 #home_page > main section:last-child > article:nth-child(odd) {
     transform: translateX(-60%);
 }
@@ -116,8 +127,6 @@ header nav ul li{
     transform: translateX(60%);
 }
 
-
-/* article sliding effect */
 #home_page > main section:last-child > article.slide {
     transform: translateX(0);
     opacity: 1;
@@ -156,8 +165,8 @@ footer{
   grid-template-columns:1fr 1fr 1fr;
   font-family: "Nunito",sans-serif;
   padding: 1rem;
-  background-color: var(--page-olive);
-  color:var(--page-pastel-green);
+  background-color: var(--page-dark-green);
+  color:var(--page-white);
 }
 
 .footer_nav{
@@ -176,7 +185,7 @@ footer .nav_links{
 }
 
 .social_media_icons{
-  border-left: 1px solid var(--page-black);
+  border-left: 1px solid var(--page-pastel-green);
   display: flex;
   flex-flow:row nowrap;
   align-items: center;
@@ -188,6 +197,7 @@ footer .nav_links{
 .social_media_icons svg{
 margin:0 1rem;
 width:40px;
+fill:white;
 }
 
 .footer_links{
@@ -209,3 +219,31 @@ width:40px;
 .footer_links ul li{
   padding: 0 1rem;
 }
+
+.dropdown{
+  display:flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  max-height:0;
+  transition:0.4s;
+  opacity:0;
+  background-color: var(--page-pastel-dark-green);
+  z-index: 100;
+  border-top: 1px solid var(--page-yellow);
+  top:10vh;
+  width:100%;
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+.dropdown li{
+  font-family: "Nunito";
+}
+
+.show{
+  max-height: 100vh;
+  opacity:1;
+}
+>>>>>>> 86f6283daeb8bde38dc925f2d32a20286c6f64d6
