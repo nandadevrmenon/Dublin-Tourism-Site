@@ -101,6 +101,26 @@ header nav ul li{
     align-items: center;
     justify-content: center;
     padding: 2em;
+    margin-bottom: 4em;
+    opacity: 0;
+    transition: 300ms;
+    position: relative;
+    z-index: -1;
+}
+
+#home_page > main section:last-child > article:nth-child(odd) {
+    transform: translateX(-60%);
+}
+
+#home_page > main section:last-child > article:nth-child(even) {
+    transform: translateX(60%);
+}
+
+
+/* article sliding effect */
+#home_page > main section:last-child > article.slide {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 #home_page > main section:last-child > article > figure {
