@@ -2,12 +2,18 @@
 @import 'animations.css';
 @import 'colors.css';
 
+
+/* to disable horizontal scrolling */
+html, body {
+      overflow-x: hidden;
+}
+
 body{
   margin:0;
   padding:0;
   background-color: var(--page-pastel-green);
   color: var(--page-font-green);
-  position:relative;
+  position: relative;
 }
 
 header{
@@ -246,4 +252,3 @@ fill:white;
   max-height: 100vh;
   opacity:1;
 }
->>>>>>> 86f6283daeb8bde38dc925f2d32a20286c6f64d6
