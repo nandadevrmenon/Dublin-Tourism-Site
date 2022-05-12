@@ -1,4 +1,3 @@
-///////FOR STICKY HEDAER/////////////////
 let dropDownActive = false;
 
 const header = document.querySelector("#home_page header");
