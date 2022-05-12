@@ -77,33 +77,25 @@ header nav ul li{
 
 /* home main */
 #home_page > main {
-    margin-top:5vh;
+    margin-top: 5vh;
     margin-bottom: 5em;
 }
 
-#home_page > main .banner{
+#home_page > main .banner {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
 }
-#home_page > main .banner h1{
-  font-family: "Maxi Round",cursive;
+#home_page > main .banner h1 {
+  font-family: "Maxi Round", cursive;
   font-size: 23vw;
   padding: 0;
   margin: 0;
 }
-/* home main decoration section */
-#home_page > main section:first-child > div:first-child {
-}
 
-#home_page > main section:first-child > div:last-child {
-    /* background-repeat: no-repeat; */
-    /* background-size: contain; */
-    /* background-position: center; */
-    /* transition: 2s linear; */
-    /* height: 150vh; */
-}
+/* home main decoration section */
+#home_page > main section:first-child > div:first-child { }
 
 /* home main info section */
 #home_page > main section:last-child {
@@ -139,13 +131,13 @@ header nav ul li{
 }
 
 #home_page > main section:last-child > article > figure {
-    flex-basis: 40%;
+    flex-basis: 35%;
     text-align: center;
-    min-width: 600px;
+    min-width: 37.5rem;
 }
 
 #home_page > main section:last-child > article > figure img {
-    max-width: 500px;
+    max-width: 31.25rem;
 }
 
 #home_page > main section:last-child > article > div {
@@ -251,4 +243,69 @@ fill:white;
 .show{
   max-height: 100vh;
   opacity:1;
+}
+
+@media screen and (max-width: 1300px) {
+
+    #home_page > main section:last-child {
+        width: 100%;
+        margin: 0; 
+    }
+
+    #home_page > main section:last-child > article {
+        justify-content: space-evenly;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #home_page > main section:last-child > article:nth-child(even) {
+        justify-content: space-between;
+    }
+    
+    #home_page > main section:last-child > article > figure {
+        max-width: 25em;
+        min-width: 300px;
+    }
+
+    #home_page > main section:last-child > article > figure img {
+        max-width: 25rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #home_page > main section:last-child > article {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #home_page > main section:last-child > article:nth-child(odd) {
+        transform: translateX(0);
+    }
+
+    #home_page > main section:last-child > article:nth-child(even) {
+        transform: translateX(0);
+    }
+
+    #home_page > main section:last-child > article h2 + div {
+        display: grid;
+        justify-content: space-between;
+    }
+
+    #home_page > main section:last-child > article h2 + div > div {
+        grid-row: 1/1;
+        grid-column: 1/1;
+    }
+
+    #home_page > main section:last-child > article h2 + div > figure {
+        grid-row: 1/1;
+        grid-column: 2/3;
+        max-width: 24rem;
+    }
+
+    #home_page > main section:last-child > article h2 + div > figure img {
+        max-width: 20rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
 }
