@@ -31,7 +31,22 @@ Page design
 Javascript
 we will probably have to implement some fancy behaviours to increase marks some ideas:
     - smooth scrolling to go top and bottom of the page or sections | instead of using <a href="to some ID">
-    - the hamburger menu
+    - the hamburger menu (for mobile design)
     - 
+
+Use some more of the observer but also for vertical rising up of divs as seen in https://www.visitdubai.com/en/whats-on/dubai-food-festival/foodie-experiences?categoryTags=Masterclass
+
+
+
+Phot wall widths one instagram cool instagram photos but these photos changes when you hover over them and give you an option to visit that instagram post
+
+
+https://onthegrid.city			( we could use this full page grid layout for some pages with more  subcategories like the whitings to do page could be like this)
+
+http://www.cookiesound.com ( I like their basic text font )
+
+
+We could have a page with a surprise me button that picks up random things to do from he whole page ?? Bit too complicated but is it possible?
+
 
 
