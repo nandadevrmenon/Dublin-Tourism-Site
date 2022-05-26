@@ -7,7 +7,7 @@ const smallScreen = window.matchMedia("(max-width: 850px)");
 const observerOptions = {
     root: null, 
     threshold: 0,
-    rootMargin: "-300px"
+    rootMargin: "-200px"
 };
 
 const observer = new IntersectionObserver(entries => {
@@ -104,4 +104,4 @@ const restoreArticles = () => {
 }
 
 smallScreenHandler(smallScreen);
-smallScreen.addListener(smallScreenHandler);
+smallScreen.addEventListener(smallScreenHandler);

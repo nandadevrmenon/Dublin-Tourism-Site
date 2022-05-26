@@ -3,6 +3,18 @@
   src:url(../fonts/ABCMaxiRound-Bold.woff)format("woff");
 }
 
+@font-face{
+  font-family:"Basic";
+  src:url(../fonts/Basic.woff)format("woff");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: "Basic";
+  src:url(../fonts/Basic_900.woff)format("woff");
+  font-weight: bold;
+}
+
 
 :root {
   --page-green: #1ea873;

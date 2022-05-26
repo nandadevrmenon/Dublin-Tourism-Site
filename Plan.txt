@@ -50,3 +50,8 @@ We could have a page with a surprise me button that picks up random things to do
 
 
 
+
+
+
+when page is belo 1300 px width we shoule make header into a hamburger menu 
+and change  all the font and images sizes it different widths
