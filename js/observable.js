@@ -104,4 +104,4 @@ const restoreArticles = () => {
 }
 
 smallScreenHandler(smallScreen);
-smallScreen.addEventListener(smallScreenHandler);
+smallScreen.addEventListener('resize', smallScreenHandler);
