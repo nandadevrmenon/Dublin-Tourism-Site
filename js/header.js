@@ -1,6 +1,7 @@
 let dropDownActive = false;
 
 const header = document.querySelector("#home_page header");
+
 window.addEventListener("scroll",function(){
   if(!dropDownActive){
   header.classList.toggle("sticky",(window.scrollY>0));
@@ -8,10 +9,11 @@ window.addEventListener("scroll",function(){
   else header.classList.add("sticky");
 })
 
-const accomodationBtn = document.querySelector("#ttd");
-const accomodationDropdown = document.querySelector(".dropdown");
 
-accomodationBtn.addEventListener("click",function(){
+const thingsToDoButton = document.querySelector("#ttd");
+const accomodationDropdown = document.querySelector(" header .dropdown");
+
+thingsToDoButton.addEventListener("click",function(){
   let dropdownClassList = accomodationDropdown.classList;
   if(dropdownClassList.contains("show")){
     dropdownClassList.remove("show");
@@ -23,3 +25,33 @@ accomodationBtn.addEventListener("click",function(){
     header.classList.add("sticky");
   }
 });
+
+
+const mobileNavToggle = document.querySelector("#menu_toggle");
+
+mobileNavToggle.addEventListener("click",function(){
+  const mobileNav = document.querySelector("#mobile_nav");
+  mobileNav.classList.toggle("is_shown");
+});
+
+
+
+const mobileDropdownButton = document.querySelector("#mobile_nav>ul>li:nth-child(2)");
+
+mobileDropdownButton.addEventListener("click",function(){
+  const mobileDropdown = document.querySelector("#mobile_nav ul .dropdown");
+  let dropdownClassList = mobileDropdown.classList;
+  if(dropdownClassList.contains("is_active")){
+    dropdownClassList.remove("is_active");
+  }
+  else {
+    dropdownClassList.add("is_active");
+  }
+});
+
+
+
+
+
+
+

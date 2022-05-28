@@ -5,7 +5,7 @@
 
 /* to disable horizontal scrolling */
 html, body {
-      overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body{
@@ -25,31 +25,13 @@ header{
   padding:1rem 0;
   transition:0.2s padding ease-in;
   background-color: var(--page-pastel-green);
+  z-index: 101;
 }
-
-header nav{
-  position:relative;
-  display:flex;
-  flex-flow:row nowrap;
-  align-items: center;
-  justify-content: space-between;
-  width: 80vw;
-  margin:0rem auto;
-}
-
-
 
 .sticky{
   padding:0rem 0;
 }
 
-/* .sticky nav ul li{
-  color:var(--page-white);
-}
-
-.sticky #brand{
-color: var(--page-white);
-} */
 
 header nav ul{
   font-family: "Nunito",sans-serif;
@@ -65,7 +47,6 @@ header nav ul{
 
 header nav ul li{
   margin: 0 1rem;
-  cursor: pointer;
 }
 
 header a{
@@ -81,7 +62,106 @@ header a{
   color: var(--page-font-green);
 }
 
+header nav{
+  position:relative;
+  display:flex;
+  flex-flow:row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  margin:0rem auto;
+}
 
+/* for dropdown in ddesktop nav */
+
+
+#home_page >header > .dropdown{
+  display:flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  max-height:0;
+  transition:0.4s;
+  opacity:0;
+  background-color: var(--page-pastel-dark-green);
+  z-index: 100;
+  border-top: 1px solid var(--page-yellow);
+  top:10vh;
+  width:100%;
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+.dropdown li{
+  font-family: "Nunito";
+}
+
+#home_page >header > .show{
+  max-height: 100vh;
+  opacity:1;
+}
+/*  for mobile navigation */
+
+
+#menu_toggle{
+  display: none;
+}
+
+
+#mobile_nav{
+  font-family: "Nunito",sans-serif;
+  position:fixed;
+  min-width: 100vw;
+  min-height:100vh;
+  background-color: #fff;
+  right:100vw;
+  z-index: 100;
+
+}
+
+#mobile_nav > ul{
+  margin: 10vh auto;
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding:0;
+}
+
+#mobile_nav .dropdown{
+  max-height:0;
+  max-width: 0;
+  transition: 1s cubic-bezier(0.21, 0.29, 0.1, 0.96);
+  /* transition: 1s max-height ease-in; */
+  overflow-y: hidden;
+  display:flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  opacity:0;
+  padding:0;
+  margin:0;
+  z-index: 100;
+  list-style-type: none;
+ 
+}
+
+#mobile_nav > ul li{
+  margin:2rem;
+}
+
+#mobile_nav > ul > li:nth-child(3){
+  margin:0;
+  width:100%;
+  background-color: var(--page-pastel-dark-green);
+}
+
+#mobile_nav ul li a{
+  color:var(--page-font-green);
+  text-decoration: none;
+}
 /* home main */
 #home_page > main {
     margin-top: 5vh;
@@ -237,34 +317,68 @@ fill:white;
   padding: 0 1rem;
 }
 
-.dropdown{
-  display:flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-around;
-  max-height:0;
-  transition:0.4s;
-  opacity:0;
-  background-color: var(--page-pastel-dark-green);
-  z-index: 100;
-  border-top: 1px solid var(--page-yellow);
-  top:10vh;
-  width:100%;
-  margin:0;
-  padding:0;
-  list-style-type: none;
-}
 
-.dropdown li{
-  font-family: "Nunito";
-}
-
-.show{
-  max-height: 100vh;
-  opacity:1;
-}
 
 @media screen and (max-width: 1300px) {
+/* changes for the header into a hamburger menu */
+
+    #menu_toggle{
+      display:block
+    }
+
+    /* #home_page > header{
+      position: relative;
+    } */
+    #home_page > header > nav ul{
+      display: none;
+    }
+
+    #mobile_nav{
+      position:fixed;
+      right:100vw;
+      top:78px;
+      min-height:100vh;
+      background-color: #fff;
+      z-index: 100;
+      display: block;
+      transition: 0.4s;
+    }
+
+    #home_page > .is_shown{
+      right:0;
+    }
+
+    #home_page header > .dropdown{
+      display: none;
+    }
+
+    #mobile_nav > ul >li > .is_active{
+      max-height: 100rem;
+      max-width: 100rem;
+      width: 90vw;
+      opacity: 100%;
+      margin:auto;
+      transition: 1s cubic-bezier(0.21, 0.29, 0.1, 0.96);
+      /* transition: 1s max-height ease-in;
+      transition: 1s opacity ease-in; */
+  
+    }
+
+    #mobile_nav > ul >li > .is_active > li{
+      width:25%;
+      text-align: center;
+    }
+
+
+
+    /* jhbjhbjbjhbjbjbjbjbbjbjbjbjhbjbjhbjhb */
+
+
+
+    #home_page > main > section:first-child{
+      margin-top:20vh;
+    }
+
 
     #home_page > main section:last-child {
         width: 100%;

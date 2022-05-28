@@ -103,5 +103,5 @@ const restoreArticles = () => {
     small = false;
 }
 
-smallScreenHandler(smallScreen);
-smallScreen.addEventListener(smallScreenHandler);
+// smallScreenHandler(smallScreen);
+// smallScreen.addEventListener(smallScreenHandler);
