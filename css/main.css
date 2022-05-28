@@ -47,6 +47,10 @@ header nav ul li{
   margin: 0 1rem;
 }
 
+header > nav > ul > li > a {
+    cursor: pointer;
+}
+
 header a{
   text-decoration: none;
   color: var(--page-font-green);
@@ -159,6 +163,7 @@ header nav{
 #mobile_nav ul li a{
   color:var(--page-font-green);
   text-decoration: none;
+  cursor: pointer;
 }
 /* home main */
 #home_page > main {
@@ -315,13 +320,19 @@ fill:white;
   padding: 0 1rem;
 }
 
+.footer_links ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 
 @media screen and (max-width: 1300px) {
 /* changes for the header into a hamburger menu */
 
     #menu_toggle{
-      display:block
+      display: block;
+      cursor: pointer;
     }
 
     /* #home_page > header{
@@ -401,9 +412,23 @@ fill:white;
     #home_page > main section:last-child > article > figure img {
         max-width: 25rem;
     }
+
+    footer > .footer_nav {
+        grid-column: 1/4;
+    }
+
+    footer > .social_media_icons {
+        border-left: none;
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
 }
 
-/* layout changed from article > (div > h2,p1,p2,button), (figure>img) to article>h2,p1,p2,(figure>img),button */
+/*
+ * layout changed 
+ * from: article>(div>h2,p1,p2,button),(figure>img)
+ * to:   article>h2,p1,p2,(figure>img),button
+ * */
 @media screen and (max-width: 850px) {
     #home_page > main section:last-child > article {
         width: 100%;
@@ -436,9 +461,26 @@ fill:white;
         max-width: 15rem;
     }
 
+    footer > .footer_nav {
+        margin-bottom: 1em;
+    }
+
+    footer > .footer_links {
+        flex-direction: column;
+    }
+
+    footer > .footer_links p {
+        order: 2;
+        width: inherit;
+    }
+
+    footer {
+        font-size: 70%;
+    }
+
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 
     #home_page > main section:last-child > article {
         opacity: 1;
@@ -460,4 +502,23 @@ fill:white;
     #home_page > main section:last-child > article figure > img {
         max-width: 10rem;
     }
+
+    footer > .footer_nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    footer > .footer_nav ul li {
+        margin-bottom: 1em;
+    }
+
+    footer > .footer_links ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    footer > .footer_links ul li {
+        margin-bottom: 1em;
+    }
+
 }
