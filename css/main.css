@@ -439,4 +439,25 @@ fill:white;
 }
 
 @media screen and (max-width: 500px) {
+
+    #home_page > main section:last-child > article {
+        opacity: 1;
+        padding: 1rem;
+    }
+
+    #home_page > main section:last-child > article h2 {
+      font-size: 1.5rem;
+    }
+
+    #home_page > main section:last-child > article p {
+        width: 70%;
+    }
+
+    #home_page > main section:last-child > article figure {
+        max-width: 15rem;
+    }
+
+    #home_page > main section:last-child > article figure > img {
+        max-width: 10rem;
+    }
 }

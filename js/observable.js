@@ -1,9 +1,9 @@
 'use strict'
 
 let articles = Array.from(document.querySelectorAll('#home_page > main > section:last-child > article'));
-let small = false;
+let layout = "default";
 const smallScreen = window.matchMedia("(max-width: 850px)");
-const tinyScreen = window.matchMedia("(max-width: 500px)");
+// const tinyScreen = window.matchMedia("(max-width: 500px)");
 
 const observerOptions = {
     root: null, 
@@ -19,22 +19,18 @@ const observer = new IntersectionObserver(entries => {
 articles.forEach(article => observer.observe(article));
 
 // media queries
-const smallScreenHandler = (small, tiny) => {
-    console.log(tiny);
-
-    if (small.matches) { 
-        smallLayout();
-    }
-    else if(tiny.matches) {
-        small = true;
-    }
-    else {
-        defaultLayout();
-    }
+const smallScreenHandler = mediaquery => {
+    if (mediaquery.matches) smallLayout();
+    else defaultLayout();
 }
 
+// const tinyScreenHandler = mediaquery => {
+//     if (mediaquery.matches) tinyLayout();
+//     else defaultLayout();
+// }
+
 const defaultLayout = () => {
-    if(!small) return; 
+    if(layout === "default") return; 
     articles.forEach((article, index) => {
         const header = article.children[0];
         const p1 = article.children[1];
@@ -53,12 +49,12 @@ const defaultLayout = () => {
     for(let i = 0; i < 5; i++) articles[i].remove(); 
     articles = Array.from(document.querySelectorAll('#home_page > main > section:last-child > article'));
     articles.forEach(article => observer.observe(article));
-    small = false;
+    layout = "default";
 }
 
 const smallLayout = () => {
+    if(layout === "small") return;
     articles.forEach((article, index) => {
-        console.log(index);
         if(index % 2 !== 0) {
             const header = article.children[1].children[0];
             const p1 = article.children[1].children[1];
@@ -67,7 +63,6 @@ const smallLayout = () => {
             const figure = article.children[0];
             article.innerHTML = '';
             article.append(header, p1, figure, p2, button);
-            console.log(article);
         }
         else {
             const header = article.children[0].children[0];
@@ -77,11 +72,46 @@ const smallLayout = () => {
             const figure = article.children[1];
             article.innerHTML = '';
             article.append(header, p1, figure, p2, button);
-            console.log(article);
         }
     });
-    small = true;
+    layout = "small";
 }
 
-smallScreenHandler(smallScreen, tinyScreen);
+// const tinyLayout = () => {
+//     if(layout === "tiny") return;
+//     articles.forEach((article, index) => {
+
+//         if(layout === "small") {
+
+//         }
+
+//         else {
+//             if(index % 2 !== 0) {
+//                 const header = article.children[1].children[0];
+//                 const p1 = article.children[1].children[1];
+//                 const p2 = article.children[1].children[2];
+//                 const button = article.children[1].children[3];
+//                 const figure = article.children[0];
+//                 article.innerHTML = '';
+//                 article.append(header, figure, p1, p2, button);
+//             }
+//             else {
+//                 const header = article.children[0].children[0];
+//                 const p1 = article.children[0].children[1];
+//                 const p2 = article.children[0].children[2];
+//                 const button = article.children[0].children[3];
+//                 const figure = article.children[1];
+//                 article.innerHTML = '';
+//                 article.append(header, figure, p1, p2, button);
+//             }
+//         }
+
+//     });
+
+//     layout = "tiny";
+// }
+
+smallScreenHandler(smallScreen);
+// tinyScreenHandler(tinyScreen);
 smallScreen.addEventListener('change', smallScreenHandler);
+// tinyScreen.addEventListener('change', tinyScreenHandler);
