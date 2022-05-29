@@ -1,0 +1,45 @@
+@import 'colors.css';
+
+/* https://codepen.io/jscottsmith/pen/eYZNMw */
+
+.styled_btn {
+    display: inline-block;
+    background: var(--page-font-green);
+    border: 0;
+    line-height: 2.5em;
+    padding: 0 0 0 1em;
+    margin-bottom: 1em;
+    outline: none;
+    text-decoration: none;
+    color: var(--page-pastel-green);
+}
+
+.styled_btn span {
+    display: inline-block;
+    line-height: 2.5em;
+    text-align: center;
+    background: var(--page-dark-green);
+    color: var(--page-pastel-green);
+    font-size: 1em;
+    width: 2.5em;
+    transition: margin 200ms;
+    margin-left: .75em;
+}
+
+.styled_btn:hover {
+    background: white;
+}
+
+.styled_btn:hover span {
+    margin-left: 1.25em;
+    background-color: #262626;
+}
+
+.styled_btn:active {
+    background: #ccc;
+}
+
+.styled_btn:active span {
+    margin-left: 1.5em;
+}
+

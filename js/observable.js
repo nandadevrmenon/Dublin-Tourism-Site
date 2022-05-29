@@ -1,8 +1,9 @@
 'use strict'
 
 let articles = Array.from(document.querySelectorAll('#home_page > main > section:last-child > article'));
-let small = false;
+let layout = "default";
 const smallScreen = window.matchMedia("(max-width: 850px)");
+// const tinyScreen = window.matchMedia("(max-width: 500px)");
 
 const observerOptions = {
     root: null, 
@@ -18,90 +19,99 @@ const observer = new IntersectionObserver(entries => {
 articles.forEach(article => observer.observe(article));
 
 // media queries
-const smallScreenHandler = (mediaQuery) => {
-
-    if (mediaQuery.matches) { 
-        articles.forEach((article, index) => {
-            if(index % 2 !== 0) {
-                const paragraphs = document.createElement('div');
-                const container = document.createElement('div');
-                const div = article.children[1];
-                const header = article.children[1].children[0];
-                const p1 = article.children[1].children[1];
-                const p2 = article.children[1].children[2];
-                const button = article.children[1].children[3];
-                const figure = article.children[0];
-
-                paragraphs.appendChild(p1);
-                paragraphs.appendChild(p2);
-                container.appendChild(paragraphs);
-                container.appendChild(figure);
-
-                article.appendChild(header);
-                article.appendChild(container);
-                article.appendChild(button);
-                div.remove();
-            }
-            else {
-                const paragraphs = document.createElement('div');
-                const container = document.createElement('div');
-                const div = article.children[0];
-                const header = article.children[0].children[0];
-                const p1 = article.children[0].children[1];
-                const p2 = article.children[0].children[2];
-                const button = article.children[0].children[3];
-                const figure = article.children[1];
-
-                paragraphs.appendChild(p1);
-                paragraphs.appendChild(p2);
-                container.appendChild(paragraphs);
-                container.appendChild(figure);
-
-                article.appendChild(header);
-                article.appendChild(container);
-                article.appendChild(button);
-                div.remove();
-            }
-        });
-        small = true;
-    }
-    else {
-        restoreArticles();
-    }
+const smallScreenHandler = mediaquery => {
+    if (mediaquery.matches) smallLayout();
+    else defaultLayout();
 }
 
-const restoreArticles = () => {
-    if(!small) return; 
+// const tinyScreenHandler = mediaquery => {
+//     if (mediaquery.matches) tinyLayout();
+//     else defaultLayout();
+// }
+
+const defaultLayout = () => {
+    if(layout === "default") return; 
     articles.forEach((article, index) => {
         const header = article.children[0];
-        const p1 = article.children[1].children[0].children[0];
-        const p2 = article.children[1].children[0].children[1];
-        const figure = article.children[1].children[1];
-        const button = article.children[2];
+        const p1 = article.children[1];
+        const p2 = article.children[3];
+        const figure = article.children[2];
+        const button = article.children[4];
         const div = document.createElement('div');
         const newArticle = document.createElement('article');
-        div.appendChild(header);
-        div.appendChild(p1);
-        div.appendChild(p2);
-        div.appendChild(button);
+        div.append(header, p1, p2, button);
 
-        if(index % 2 !== 0) {
-            newArticle.appendChild(figure); 
-            newArticle.appendChild(div); 
-        }
-        else {
-            newArticle.appendChild(div); 
-            newArticle.appendChild(figure); 
-        }
-
+        if(index % 2 !== 0) newArticle.append(figure, div);
+        else newArticle.append(div, figure);
         document.querySelector('#home_page > main > section:last-child').appendChild(newArticle);
     });
 
     for(let i = 0; i < 5; i++) articles[i].remove(); 
     articles = Array.from(document.querySelectorAll('#home_page > main > section:last-child > article'));
     articles.forEach(article => observer.observe(article));
-    small = false;
+    layout = "default";
 }
 
+const smallLayout = () => {
+    if(layout === "small") return;
+    articles.forEach((article, index) => {
+        if(index % 2 !== 0) {
+            const header = article.children[1].children[0];
+            const p1 = article.children[1].children[1];
+            const p2 = article.children[1].children[2];
+            const button = article.children[1].children[3];
+            const figure = article.children[0];
+            article.innerHTML = '';
+            article.append(header, p1, figure, p2, button);
+        }
+        else {
+            const header = article.children[0].children[0];
+            const p1 = article.children[0].children[1];
+            const p2 = article.children[0].children[2];
+            const button = article.children[0].children[3];
+            const figure = article.children[1];
+            article.innerHTML = '';
+            article.append(header, p1, figure, p2, button);
+        }
+    });
+    layout = "small";
+}
+
+// const tinyLayout = () => {
+//     if(layout === "tiny") return;
+//     articles.forEach((article, index) => {
+
+//         if(layout === "small") {
+
+//         }
+
+//         else {
+//             if(index % 2 !== 0) {
+//                 const header = article.children[1].children[0];
+//                 const p1 = article.children[1].children[1];
+//                 const p2 = article.children[1].children[2];
+//                 const button = article.children[1].children[3];
+//                 const figure = article.children[0];
+//                 article.innerHTML = '';
+//                 article.append(header, figure, p1, p2, button);
+//             }
+//             else {
+//                 const header = article.children[0].children[0];
+//                 const p1 = article.children[0].children[1];
+//                 const p2 = article.children[0].children[2];
+//                 const button = article.children[0].children[3];
+//                 const figure = article.children[1];
+//                 article.innerHTML = '';
+//                 article.append(header, figure, p1, p2, button);
+//             }
+//         }
+
+//     });
+
+//     layout = "tiny";
+// }
+
 smallScreenHandler(smallScreen);
-smallScreen.addEventListener('resize', smallScreenHandler);
+// tinyScreenHandler(tinyScreen);
+smallScreen.addEventListener('change', smallScreenHandler);
+// tinyScreen.addEventListener('change', tinyScreenHandler);
