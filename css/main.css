@@ -186,13 +186,7 @@ header nav{
 }
 
 /* home main decoration section */
-#home_page > main section:first-child > div:first-child { }
-
-/* home main info section */
-#home_page > main section:last-child {
-    width: 80%;
-    margin: 0 auto;
-}
+/* #home_page > main section:first-child > div:first-child { } */
 
 #home_page > main section:last-child > article {
     display: flex;
