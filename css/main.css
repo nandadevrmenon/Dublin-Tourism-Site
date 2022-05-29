@@ -284,6 +284,11 @@ footer .nav_links{
   justify-content: space-around;
 }
 
+footer .nav_links a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .no_bullets{
   list-style-type: none;
 }
