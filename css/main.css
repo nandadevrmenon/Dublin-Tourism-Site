@@ -552,3 +552,9 @@ fill:white;
 #legal_page section p {
     width: 80%;
 }
+
+#legal_page section :where(p, ul li) a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
