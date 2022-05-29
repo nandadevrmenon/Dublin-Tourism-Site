@@ -520,3 +520,24 @@ fill:white;
     }
 
 }
+
+#legal_page {
+    margin-top: 15vh;
+}
+
+#legal_page section:first-child {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+
+#legal_page section article {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+#legal_page section p {
+    width: 80%;
+}
