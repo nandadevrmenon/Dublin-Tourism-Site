@@ -409,6 +409,7 @@ fill:white;
 
     #home_page > main section:last-child > article > figure img {
         max-width: 25rem;
+        box-shadow: 10px 10px 10px 10px black;
     }
 
     footer > .footer_nav {
