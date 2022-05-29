@@ -8,8 +8,6 @@
 }
 
 #gen_page > main > div:first-child {
-  font-family: "Maxi Round";
-  background-image: url("../images/accomodation.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -19,5 +17,44 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  color:#fff;
+  color:#ffffff;
 } 
+
+#accomodation_banner{
+  background-image: url("../images/accomodation.jpg");
+}
+
+
+#gen_page > main > div:first-child h1{
+  font-family: "Koulen";
+  padding-top: 4rem;
+  font-size: 7rem;
+  letter-spacing: 2px;
+}
+
+#gen_page > main > div:nth-child(2){
+  width:80vw;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--page-light-green);
+  padding:2rem;
+}
+
+
+#gen_page > main > div:nth-child(2) >h3{
+font-size: 2rem;
+grid-column: 1/2;
+}
+
+#gen_page > main > div:nth-child(2) >form{
+  font-size: 2rem;
+  grid-column: 3/4;
+  }
+
+
+#gen_page > main > div:nth-child(2) >div{
+  grid-row: 2/3;
+  display: flex;
+  
+}

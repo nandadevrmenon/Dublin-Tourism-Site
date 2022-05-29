@@ -31,11 +31,12 @@
 
 .styled_btn:hover {
     background: white;
+    color:var(--page-dark-green);
 }
 
 .styled_btn:hover span {
     margin-left: 1.25em;
-    background-color: #262626;
+    /* background-color: #262626; */
 }
 
 .styled_btn:active {
@@ -44,4 +45,11 @@
 
 .styled_btn:active span {
     margin-left: 1.5em;
+}
+
+
+
+.move_down_btn{
+    color:#fff;
+    height:50px;
 }
