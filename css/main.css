@@ -334,7 +334,7 @@ fill:white;
     #mobile_nav{
       position:fixed;
       right:100vw;
-      top:78px;
+      top:6vh;
       min-height:100vh;
       background-color: #fff;
       z-index: 100;
@@ -357,9 +357,6 @@ fill:white;
       opacity: 100%;
       margin:auto;
       transition: 1s cubic-bezier(0.21, 0.29, 0.1, 0.96);
-      /* transition: 1s max-height ease-in;
-      transition: 1s opacity ease-in; */
-  
     }
 
     #mobile_nav > ul >li > .is_active > li{
