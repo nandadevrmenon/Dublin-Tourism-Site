@@ -1,0 +1,23 @@
+@import 'colors.css';
+
+
+
+#gen_page > main{
+  position: relative;
+  top: 7vh;
+}
+
+#gen_page > main > div:first-child {
+  font-family: "Maxi Round";
+  background-image: url("../images/accomodation.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height:77vh;
+  width:100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+} 

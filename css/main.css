@@ -1,5 +1,6 @@
 @import 'colors.css';
 @import 'buttons.css';
+@import 'general_page.css';
 
 
 /* to disable horizontal scrolling */
@@ -78,7 +79,7 @@ header nav{
 /* for dropdown in ddesktop nav */
 
 
-#home_page >header > .dropdown{
+#page_header > .dropdown{
   display:flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -100,7 +101,14 @@ header nav{
   font-family: "Nunito";
 }
 
-#home_page >header > .show{
+.dropdown li a{
+  display:none;
+}
+
+#page_header > .show a{
+  display: block;
+}
+#page_header > .show{
   max-height: 100vh;
   opacity:1;
 }
@@ -137,7 +145,6 @@ header nav{
   max-height:0;
   max-width: 0;
   transition: 1s cubic-bezier(0.21, 0.29, 0.1, 0.96);
-  /* transition: 1s max-height ease-in; */
   overflow-y: hidden;
   display:flex;
   flex-flow: row nowrap;
@@ -166,6 +173,7 @@ header nav{
   text-decoration: none;
   cursor: pointer;
 }
+
 /* home main */
 #home_page > main {
     margin-top: 5vh;
@@ -235,6 +243,7 @@ header nav{
 #home_page > main section:last-child > article > figure img {
     max-width: 31.25rem;
     border-radius: 10px;
+    box-shadow: 5px 5px 20px -9px #000000;
 }
 
 #home_page > main section:last-child > article > div {
@@ -330,10 +339,7 @@ fill:white;
       cursor: pointer;
     }
 
-    /* #home_page > header{
-      position: relative;
-    } */
-    #home_page > header > nav ul{
+    #page_header > nav ul{
       display: none;
     }
 
@@ -348,11 +354,11 @@ fill:white;
       transition: 0.4s;
     }
 
-    #home_page > .is_shown{
+    #mobile_nav.is_shown{
       right:0;
     }
 
-    #home_page header > .dropdown{
+    #page_header .dropdown{
       display: none;
     }
 
@@ -403,7 +409,6 @@ fill:white;
 
     #home_page > main section:last-child > article > figure img {
         max-width: 25rem;
-        box-shadow: 10px 10px 10px 10px black;
     }
 
     footer > .footer_nav {

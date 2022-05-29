@@ -1,6 +1,6 @@
 let dropDownActive = false;
 
-const header = document.querySelector("#home_page header");
+const header = document.querySelector("#page_header");
 
 window.addEventListener("scroll",function(){
   if(!dropDownActive){
@@ -11,7 +11,7 @@ window.addEventListener("scroll",function(){
 
 
 const thingsToDoButton = document.querySelector("#ttd");
-const accomodationDropdown = document.querySelector(" header .dropdown");
+const accomodationDropdown = document.querySelector("#page_header .dropdown");
 
 thingsToDoButton.addEventListener("click",function(){
   let dropdownClassList = accomodationDropdown.classList;

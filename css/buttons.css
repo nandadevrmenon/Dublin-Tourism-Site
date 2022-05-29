@@ -13,6 +13,7 @@
     text-decoration: none;
     color: var(--page-pastel-green);
     border-radius: 10px;
+    box-shadow: 5px 5px 20px -9px #000000;
 }
 
 .styled_btn span {
@@ -44,4 +45,3 @@
 .styled_btn:active span {
     margin-left: 1.5em;
 }
-
