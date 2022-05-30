@@ -102,11 +102,11 @@ header nav{
   font-family: "Nunito";
 }
 
-.dropdown li a{
+#page_header .dropdown li a{
   display:none;
 }
 
-#page_header > .show a{
+#page_header > .show li a{
   display: block;
 }
 #page_header > .show{
@@ -114,7 +114,6 @@ header nav{
   opacity:1;
 }
 /*  for mobile navigation */
-
 
 #menu_toggle{
   display: none;
@@ -381,8 +380,6 @@ fill:white;
       width:25%;
       text-align: center;
     }
-
-
 
     /* jhbjhbjbjhbjbjbjbjbbjbjbjbjhbjbjhbjhb */
 
