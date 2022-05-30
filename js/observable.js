@@ -13,6 +13,7 @@ const observerOptions = {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("slide", entry.isIntersecting);
+        if(entry.isIntersecting) observer.unobserve(entry.target);
     })}, observerOptions);
 
 articles.forEach(article => observer.observe(article));
