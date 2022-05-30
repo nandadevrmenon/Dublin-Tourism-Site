@@ -33,6 +33,10 @@
   background-position: center;
 }
 
+#gen_page > main > #attractions_banner{
+  background-image: url("../images/attractions.webp");
+}
+
 
 
 
