@@ -392,12 +392,3 @@ const loadElements = (pageID, arr) => { const container = document.querySelector
         container.appendChild(section);
     });
 }
-
-// loadElements("#accomodations", accomodations);
-// loadElements("#food_nightlife", food);
-// loadElements("#shopping", shopping);
-// loadElements("#adventure", things);
-// loadElements("#attractions", attractions);
-
-
-
