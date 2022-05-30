@@ -1,18 +1,18 @@
-const getJSON = async url => {
-    try {
-        const data = await fetch(url);
-        const response = await data.json();  
-        return response;
-    }
-    catch (e) {
-        console.log(e);
-    }
-};
+let db = [];
+const urls = [
+    '../db/adventure.json',
+    '../db/attractions.json',
+    '../db/shopping.json',
+    '../db/cafes.json',
+    '../db/hotels.json',
+    '../db/pubs.json',
+    '../db/restaurants.json'
+];
 
-const adventure = getJSON('../db/adventure.json');
-const attractions = getJSON('../db/attractions.json');
-const shopping = getJSON('../db/shopping.json');
-const cafes = getJSON('../db/cafes.json');
-const hotels = getJSON('../db/hotels.json');
-const pubs = getJSON('../db/pubs.json');
-const restaurants = getJSON('../db/restaurants.json');
+urls.forEach(url => {
+    fetch(url)
+        .then(response => response.json())
+        .then(json => db.push(json));
+});
+
+
