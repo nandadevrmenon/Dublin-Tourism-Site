@@ -2,6 +2,7 @@
 
 
 
+
 #gen_page > main{
   top: 7vh;
 }
@@ -11,7 +12,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  height:77vh;
+  height:85vh;
   width:100vw;
   display: flex;
   flex-flow: column nowrap;
@@ -25,7 +26,7 @@
 
 /* The different banners for different pages */
 
-#accomodation_banner{
+#gen_page > main > #accomodation_banner{
   background-image: url("../images/accomodation.jpg");
 }
 #gen_page > main > #adventure_banner{
@@ -41,6 +42,16 @@
   background-image: url("../images/getting_around.jpg");
 }
 
+#gen_page > main > #shopping_banner{
+  background-image: url("");
+}
+
+#gen_page > main > #food_banner{
+  background-image: url("../images/food_banner.jpg");
+  background-position: center;
+  color:rgb(255, 255, 255);
+}
+
 
 
 /* font stuff for banner div */
@@ -51,7 +62,6 @@
   letter-spacing: 2px;
 }
 
-
 #gen_page > main > div:first-child a img{
   border: 2px solid white;
   border-radius: 100%;
@@ -61,21 +71,22 @@
 #gen_page > main > div:nth-child(2){
   font-family: "Basic",sans-serif;
   width:77vw;
-  margin: 2rem auto;
+  margin: 4rem auto;
   display: grid;
   border-radius: 10px;
   box-shadow: 5px 5px 15px -9px #012d00;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: var(--page-light-green);
   padding:2rem;
-  gap:2rem;
+  gap:0.5rem;
 }
+
 
 /* main heading for the search area */
 #gen_page > main > div:nth-child(2) >h1{
 font-size: 2rem;
 grid-column: 1/3;
-text-align: center;
+
 }
 
 #gen_page > main > div:nth-child(2) >form{
@@ -116,6 +127,10 @@ text-align: center;
   margin:1.6rem auto;
 }
 
+#gen_page > main > div:nth-child(2) >div >section.hide_card{
+  display: none;
+}
+
 #gen_page > main > div:nth-child(2) >div >section > img{
   grid-column: 1/2;
   grid-row: 1/4;
@@ -136,9 +151,34 @@ text-align: center;
   text-align: justify;
 }
 
+/* for food page since we have a few tabs within the page */
 
+#gen_page > main > div:nth-child(2) > #foodnight{
+  grid-row: 4/5;
+}
 
+#gen_page > main > div:nth-child(2) > #filter_btn{
+  display: none;
+}
 
+#gen_page > main > div:nth-child(2) > #tabs{
+  width: 100%;
+  margin-top: 1rem;
+}
+#gen_page > main > div:nth-child(2) > #tabs ul{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content:space-around;
+  margin:0;
+  padding: 0;
+  width: 100%;
+}
+
+#gen_page > main > div:nth-child(2) > #tabs ul li{
+  
+  font-size: 1.3rem;
+}
 
 
 
@@ -173,6 +213,7 @@ text-align: center;
   /* main heading for the search area */
   #gen_page > main > div:nth-child(2) >h1{
   font-size: 2rem;
+  text-align: center;
   }
   
   #gen_page > main > div:nth-child(2) >form{

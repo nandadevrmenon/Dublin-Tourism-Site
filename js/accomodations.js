@@ -7,11 +7,14 @@ const loadElements = (pageID, arr) => {
         const h3 = document.createElement("h3");
         const p = document.createElement("p");
         h3.textContent = entry["name"];
-        img.src = `images/accomodation${entry["id"]}.jpg`
+        // img.src = `images/accomodation${entry["id"]}.jpg`
         p.textContent = entry["desc"]; section.append(img, h3, p);
         container.appendChild(section);
     });
 }
+
+
+
 
 const accomodations = [
     {"id": 0, "name": "Aspect Hotel Dublin Parkwest", "desc": "Aspect Hotel Dublin Parkwest is located within the Park West Business Campus, just a short distance from Dublin City Centre and many other corporate estates. The four-star hotel offers friendly service, and comfortable guest bedrooms and suites." },
