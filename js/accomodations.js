@@ -1,49 +1,16 @@
 'use strict'
-
-// const loadElements = (pageID, arr) => {
-//     const container = document.querySelector(pageID);
-//     arr.forEach(entry => { const section = document.createElement("section");
-//         const img = document.createElement("img");
-//         const h3 = document.createElement("h3");
-//         const p = document.createElement("p");
-//         h3.textContent = entry["name"];
-//         img.src = `images/accomodation${entry["id"]}.jpg`
-//         p.textContent = entry["desc"]; section.append(img, h3, p);
-//         container.appendChild(section);
-//     });
-// }
-
-const loadElements = (pageID, arr) => { 
+const loadElements = (pageID, arr) => {
     const container = document.querySelector(pageID);
-    arr.forEach(entry => {
-        const section = document.createElement("section");
-        let img = document.createElement("img");
+    arr.forEach(entry => { const section = document.createElement("section");
+        const img = document.createElement("img");
         const h3 = document.createElement("h3");
         const p = document.createElement("p");
-
-        const anchor = document.createElement('a');
-        const div = document.createElement('div');
-        const h4 = document.createElement('h4')
-        const websiteLinkImg = document.createElement('img');
-        anchor.href = ``; 
-        const  errorHandler = () => {
-            img.remove();
-            img = null;
-            websiteLinkImg.src = 'images/websiteLinkImg.png';
-            h4.textContent = 'Website'
-            div.append(h4, websiteLinkImg);
-            anchor.appendChild(div);
-        } 
-
         h3.textContent = entry["name"];
-        img.src = `images/accomodations${entry["id"]}.jpg`;
-        img.addEventListener('error', errorHandler);
-        p.textContent = entry["desc"];
-        section.append(img == null ? img : anchor, h3, p);
+        img.src = `images/accomodation${entry["id"]}.jpg`
+        p.textContent = entry["desc"]; section.append(img, h3, p);
         container.appendChild(section);
     });
 }
-
 
 const accomodations = [
     {"id": 0, "name": "Aspect Hotel Dublin Parkwest", "desc": "Aspect Hotel Dublin Parkwest is located within the Park West Business Campus, just a short distance from Dublin City Centre and many other corporate estates. The four-star hotel offers friendly service, and comfortable guest bedrooms and suites." },
