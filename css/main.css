@@ -210,6 +210,7 @@ header nav{
     /* it overlaps with the sticky nav otherwise */
     position: relative;
     z-index: -1; 
+    text-align: justify;
 }
 
 #home_page > main section article div h2{
