@@ -1,14 +1,16 @@
 'use strict'
-
 const loadElements = (pageID, arr) => {
     const container = document.querySelector(pageID);
     arr.forEach(entry => { const section = document.createElement("section");
         const img = document.createElement("img");
         const h3 = document.createElement("h3");
         const p = document.createElement("p");
+        const anchor = document.createElement('a');
+        anchor.href = `https://duckduckgo.com/?q=\\${entry["name"]}+dublin&t=h_&ia=web`;
         h3.textContent = entry["name"];
+        anchor.appendChild(h3);
         img.src = `images/accomodation${entry["id"]}.jpg`
-        p.textContent = entry["desc"]; section.append(img, h3, p);
+        p.textContent = entry["desc"]; section.append(img, anchor, p);
         container.appendChild(section);
     });
 }

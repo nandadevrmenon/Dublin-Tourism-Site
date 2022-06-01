@@ -127,6 +127,9 @@ grid-column: 1/3;
   margin:1.6rem auto;
 }
 
+#gen_page > main > div:nth-child(2) >div >section h3{
+margin:0;
+}
 #gen_page > main > div:nth-child(2) >div >section.hide_card{
   display: none;
 }
@@ -137,11 +140,13 @@ grid-column: 1/3;
   width: 100%;
 }
 
-#gen_page > main > div:nth-child(2) >div >section > h3{
+#gen_page > main > div:nth-child(2) >div >section > a {
   grid-column: 2/4;
   font-size: 2rem;
   margin:0;
   padding:0;
+  text-decoration: none;
+  color: inherit;
 }
 
 #gen_page > main > div:nth-child(2) >div >section > p{
@@ -151,7 +156,7 @@ grid-column: 1/3;
   text-align: justify;
 }
 
-/* for food page since we have a few tabs within the page */
+/* for food page since we have a few category buttons within the page */
 
 #gen_page > main > div:nth-child(2) > #foodnight{
   grid-row: 4/5;
@@ -165,6 +170,8 @@ grid-column: 1/3;
   width: 100%;
   margin-top: 1rem;
 }
+
+
 #gen_page > main > div:nth-child(2) > #tabs ul{
   display: flex;
   flex-flow: row nowrap;
@@ -176,10 +183,20 @@ grid-column: 1/3;
 }
 
 #gen_page > main > div:nth-child(2) > #tabs ul li{
-  
+  background-color: var(--page-green-unselected);
+  padding:1rem;
   font-size: 1.3rem;
+  border-radius: 12px;
 }
 
+
+#gen_page > main > div:nth-child(2) > #tabs ul li.selected{
+  background-color: var(--page-green-selected);
+  padding:1rem;
+  font-size: 1.3rem;
+  border-radius: 12px;
+  transition: 0.35s ease-in-out;
+}
 
 
 @media screen and (max-width: 1100px) {
@@ -239,7 +256,7 @@ grid-column: 1/3;
     width: 100%;
   }
   
-  #gen_page > main > div:nth-child(2) >div >section > h3{
+  #gen_page > main > div:nth-child(2) >div >section > a {
     font-size: 1.5rem;
   }
   
@@ -274,7 +291,7 @@ grid-column: 1/3;
     margin:0 auto;
   }
   
-  #gen_page > main > div:nth-child(2) >div >section > h3{
+  #gen_page > main > div:nth-child(2) >div >section > a {
     grid-column: 1/4;
     grid-row: 2/3;
     font-size: 2rem;

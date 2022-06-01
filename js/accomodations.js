@@ -5,9 +5,12 @@ const loadElements = (pageID, arr) => {
         const img = document.createElement("img");
         const h3 = document.createElement("h3");
         const p = document.createElement("p");
+        const anchor = document.createElement('a');
+        anchor.href = `https://duckduckgo.com/?q=\\${entry["name"]}+dublin&t=h_&ia=web`;
         h3.textContent = entry["name"];
-        img.src = `images/accomodation${entry["id"]}.jpg`
-        p.textContent = entry["desc"]; section.append(img, h3, p);
+        img.src = `images/accomodations/${entry["id"]}.jpg`;
+        anchor.appendChild(h3);
+        p.textContent = entry["desc"]; section.append(img, anchor, p);
         container.appendChild(section);
     });
 }
@@ -56,12 +59,10 @@ const accomodations = [
     {"id": 40, "name": "The Marker Hotel", "desc": "Extraordinary, surprising and luxurious, The Marker Hotel is the perfect urban retreat for those who crave the unconventional, yet still expect the exceptional standards of service that are the signature of a member of The Leading Hotels of the World®."},
     {"id": 41, "name": "Maldron Hotel Kevin Street", "desc": "Maldron Hotel Kevin Street is a 4 star hotel located beside St Patrick's Cathedral and just minutes walk from St Stephen’s Green, Grafton Street and many other well known tourist attractions."},
     {"id": 42, "name": "Haddington House", "desc": "Haddington House is a boutique hotel on the seafront in Dun Laoghaire overlooking Dublin Bay. Originally four Georgian townhouses the hotel began it's life as Haddington House, a finishing school for girls. it was converted into a hotel in the 1950's"},
-    {"id": 43, "name": "Rathmines (Dublin 6)", "desc": "This modern spacious apartment, off the quiet Victorian Square 2km from the City Centre, is tastefully furnished. It includes a bedroom, livingroom, bath, shower, kitchen, TV and laundry facilities. Linen is supplied and there is private parking."},
     {"id": 44, "name": "Harap Farm", "desc": "Hapar Farm are 3 Star Fáilte Ireland approved semi-detached three bedroom houses set on a family run tillage farm in North County Dublin. The properties are located only 20 minutes from the centre of Dublin City and 10 minutes from Dublin Airport."},
     {"id": 45, "name": "The Davenport", "desc": "The Davenport is one of Dublin's most iconic luxury hotel's, where heritage and history seamlessly blend with modern luxury right in the heart of Georgian Dublin."},
     {"id": 46, "name": "Garden Lane Backpackers", "desc": "Garden Lane Backpackers is a stylish and contemporary hostel in the convenient central location of Christchurch, Dublin. Garden Lane aims to make your stay in Dublin as comfortable and enjoyable as possible."},
     {"id": 47, "name": "Hilton Dublin", "desc": "The 4 star Hilton Charlemont Dublin is an Irish owned modern hotel overlooking the leafy Grand Canal. Only minutes from all Dublin's historic attractions and shopping area Grafton Street, it offers the ideal location for visitors to Dublin."},
-    {"id": 48, "name": "Hillview Self Catering", "desc": "Hillview Self Catering is ideally situated in a tranquil setting between Lusk and Skerries yet only a 15 minute drive from Dublin Airport and 30 minutes from Dublin City."},
     {"id": 49, "name": "Jurys Inn Christchurch", "desc": "Jurys Inn Christchurch is located in the historic quarter of Dublin City Centre, just steps from Christchurch Cathedral and the lively Temple Bar area. The hotel offers modern and stylish accommodation and is an ideal base for business and leisure."}
 ];
 
