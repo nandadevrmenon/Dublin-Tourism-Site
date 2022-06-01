@@ -9,7 +9,7 @@ const loadElements = (pageID, arr) => {
         anchor.href = `https://duckduckgo.com/?q=\\${entry["name"]}+dublin&t=h_&ia=web`;
         h3.textContent = entry["name"];
         anchor.appendChild(h3);
-        img.src = `images/accomodation${entry["id"]}.jpg`
+        img.src = `images/shopping/${entry["id"]}.jpg`
         p.textContent = entry["desc"]; section.append(img, anchor, p);
         container.appendChild(section);
     });
@@ -21,7 +21,7 @@ const shopping = [
     {"id": 2, "name": "O'Sullivan Antiques", "desc": "Visit O'Sullivan Antiques in Dublin City, where they specialise in 18th and 19th century furniture, paintings, mirrors, chandeliers, mantelpieces and garden furniture."},
     {"id": 3, "name": "Na Píobairí Uilleann", "desc": "Na Píobairí Uilleann (NPU), the Society of Uilleann Pipers was founded in 1968 when there were less than 100 uilleann pipers remaining. Now, over 45 years later, NPU is a thriving arts organisation dedicated to Sharing the Sound of Ireland."},
     {"id": 4, "name": "Mespil Road Lunchtime Market", "desc": "Visit the fresh food market at Mespil Road, Grand Canal every Thursday lunchtime from 11:30am – 2pm and try some delicious street food from a select group of street food vendors, chefs and producers."},
-    {"id": 5, "name": "Magee Of South Anne Street;With over 150 years behind them", "desc": " Magee's is a true heritage brand."},
+    {"id": 5, "name": "Magee Of South Anne Street", "desc": " With over 150 years behind them Magee's is a true heritage brand."},
     {"id": 6, "name": "Moore Street Market", "desc": "Moore Street Market is the scene of Dublin City's famous street barrow vendors. A selection of fruit, vegetables and flowers are available making this street full of colour."},
     {"id": 7, "name": "McDowells Jewellers The Happy Ring House", "desc": "McDowells Jewellers is located in Dublin city centre. It has a wide selection of jewellery for sale and also carries out all types of jewellery repairs, ring resizing, restoration and a clean and polish service."},
     {"id": 8, "name": "Omni Park Shopping Centre", "desc": "Omni Park Shopping Centre is a one stop shopping destination located in the Santry area of North Dublin City."},
