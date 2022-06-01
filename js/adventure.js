@@ -9,7 +9,7 @@ const loadElements = (pageID, arr) => {
         anchor.href = `https://duckduckgo.com/?q=\\${entry["name"]}+dublin&t=h_&ia=web`;
         h3.textContent = entry["name"];
         anchor.appendChild(h3);
-        img.src = `images/accomodation${entry["id"]}.jpg`
+        img.src = `images/adventure/${entry["id"]}.jpg`
         p.textContent = entry["desc"]; section.append(img, anchor, p);
         container.appendChild(section);
     });
