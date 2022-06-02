@@ -207,9 +207,6 @@ header nav{
     margin-bottom: 4em;
     opacity: 0;
     transition: 300ms;
-    /* it overlaps with the sticky nav otherwise */
-    position: relative;
-    z-index: -1; 
     text-align: justify;
 }
 

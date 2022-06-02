@@ -1,7 +1,5 @@
 @import 'colors.css';
 
-/* https://codepen.io/jscottsmith/pen/eYZNMw */
-
 .styled_btn {
     display: inline-block;
     background: var(--page-font-green);
@@ -30,13 +28,13 @@
 }
 
 .styled_btn:hover {
-    background: white;
-    color:var(--page-dark-green);
+    background: var(--page-green);
+    color: var(--page-dark-green);
 }
 
 .styled_btn:hover span {
     margin-left: 1.25em;
-    /* background-color: #262626; */
+    background: var(--page-font-green);
 }
 
 .styled_btn:active {
