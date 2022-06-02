@@ -57,7 +57,7 @@ const smallLayout = () => {
             const button = article.children[1].children[3];
             const figure = article.children[0];
             article.innerHTML = '';
-            article.append(header, p1, p2, figure, button);
+            article.append(header, figure, p1, p2, button);
         }
         else {
             const header = article.children[0].children[0];
@@ -66,7 +66,7 @@ const smallLayout = () => {
             const button = article.children[0].children[3];
             const figure = article.children[1];
             article.innerHTML = '';
-            article.append(header, p1, p2, figure, button);
+            article.append(header, figure, p1, p2, button);
         }
     });
     layout = "small";
