@@ -53,6 +53,10 @@
   color:rgb(255, 255, 255);
 }
 
+#gen_page > main > #tips_banner{
+  background-image: url("../images/tips.jpg");
+}
+
 
 
 /* font stuff for banner div */

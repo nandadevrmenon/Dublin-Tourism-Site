@@ -1,7 +1,7 @@
 @import 'colors.css';
 
 #travel_tips {
-    margin-top: 15vh;
+    font-family: "Basic",sans-serif;
     font-size: 1.3rem;
     line-height: 1.8;
 }
@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: space-between;
     border: 2px solid var(--page-dark-green);
-    border-radius: 2em;
+    border-radius: 1em;
     padding: 2em;
 }
 
@@ -29,11 +29,12 @@
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 1em;
     background-color: var(--page-light-green);
-    padding: .5em;
-    border-radius: 2em;
+    padding: 2em;
+    border-radius: 1em;
 }
 
 #travel_tips #tips article {
+    font-weight: bold;
     opacity: 0.8;
     background-size: cover;
     background-position: center;
@@ -45,16 +46,42 @@
     border-radius: 1em;
     color: #fff;
     text-shadow: 1px 1px #000;
+    border:2px solid white;
+
 }
 
 #travel_tips #tips a {
     text-shadow: none;
 }
+#travel_tips #tips article{
+    position:relative;
+}
 
+#travel_tips #tips article .styled_btn{
+    font-size: 1rem;
+}
+
+#travel_tips #tips article::before{    
+    content: "";
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    z-index: -1;
+    border-radius: 1em;
+}
 
 #travel_tips #tips article:first-child {
     grid-column: 1/3;
     grid-row: 1/2;
+}
+
+#travel_tips #tips article:first-child::before{
+    background-image: url("../images/tips/0.jpg");
 }
 
 #travel_tips #tips article:nth-child(2) {
@@ -62,9 +89,18 @@
     grid-row: 1/3;
 }
 
+#travel_tips #tips article:nth-child(2)::before{
+    background-image: url("../images/tips/1.jpg");
+}
+
+
 #travel_tips #tips article:nth-child(3) {
     grid-column: 1/2;
     grid-row: 2/4;
+}
+
+#travel_tips #tips article:nth-child(3)::before{
+    background-image: url("../images/tips/2.jpg");
 }
 
 #travel_tips #tips article:nth-child(4) {
@@ -72,9 +108,21 @@
     grid-row: 2/4;
 }
 
+#travel_tips #tips article:nth-child(4)::before{
+    background-image: url("../images/tips/3.jpg");
+}
+
+#travel_tips #tips article:nth-child(5)::before{
+    background-image: url("../images/tips/4.jpg");
+}
+
 #travel_tips #tips article:nth-child(6) {
     grid-column: 1/2;
     grid-row: 4/6;
+}
+
+#travel_tips #tips article:nth-child(6)::before{
+    background-image: url("../images/tips/5.jpg");
 }
 
 #travel_tips #tips article:nth-child(7) {
@@ -82,17 +130,27 @@
     grid-row: 4/5;
 }
 
+#travel_tips #tips article:nth-child(7)::before{
+    background-image: url("../images/tips/6.jpg");
+}
+
 #travel_tips #tips article:nth-child(8) {
     grid-column: 2/4;
     grid-row: 5/6;
 }
+
+#travel_tips #tips article:nth-child(8)::before{
+    background-image: url("../images/tips/7.jpg");
+}
+
+
 
 
 @media screen and (max-width: 1300px) {
     #travel_tips #tips {
         display: flex;
         flex-direction: column;
-        
+        padding: 0;
     }
 }
 
