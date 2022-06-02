@@ -28,9 +28,9 @@ const defaultLayout = () => {
     if(layout === "default") return; 
     articles.forEach((article, index) => {
         const header = article.children[0];
-        const p1 = article.children[1];
-        const p2 = article.children[2];
-        const figure = article.children[3];
+        const figure = article.children[1];
+        const p1 = article.children[2];
+        const p2 = article.children[3];
         const button = article.children[4];
         const div = document.createElement('div');
         const newArticle = document.createElement('article');
