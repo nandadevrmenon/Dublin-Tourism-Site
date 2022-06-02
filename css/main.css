@@ -4,7 +4,11 @@
 @import 'simple_layout.css';
 @import 'contact.css';
 @import 'tips.css';
+<<<<<<< HEAD
 @import 'about_developers.css';
+=======
+@import 'things.css';
+>>>>>>> 174786183e70d928ad9735f413eed0e7b4fe3864
 
 /* to disable horizontal scrolling */
 html, body {
