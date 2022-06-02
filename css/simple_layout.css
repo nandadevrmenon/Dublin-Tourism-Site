@@ -1,31 +1,31 @@
-#legal_page {
+#simple_layout {
     margin-top: 15vh;
     font-family: "Basic",sans-serif;
     font-size: 1.3rem;
     line-height: 1.8;
 }
 
-#legal_page h2 {
+#simple_layout h2 {
   font-size: 2.1rem;
 }
 
-#legal_page section:first-child {
+#simple_layout section:first-child {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 2rem;
 }
 
-#legal_page section article {
+#simple_layout section article {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 2rem;
 }
 
-#legal_page section p {
+#simple_layout section p {
     width: 80%;
 }
 
-#legal_page section :where(p, ul li) a {
+#simple_layout section :where(p, ul li) a {
     text-decoration: none;
     font-weight: bold;
     color: inherit;
