@@ -6,7 +6,8 @@ const loadElements = (pageID, arr) => {
         const h3 = document.createElement("h3");
         const p = document.createElement("p");
         const anchor = document.createElement('a');
-        anchor.href = `https://duckduckgo.com/?q=\\${entry["name"]}+dublin&t=h_&ia=web`;
+        // anchor.href = `https://duckduckgo.com/?q=\\${entry["name"]}+dublin&t=h_&ia=web`;
+        anchor.href = `https://www.google.ie/maps/search/'${entry["name"]}'/`;
         h3.textContent = entry["name"];
         anchor.appendChild(h3);
         img.src = `images/shopping/${entry["id"]}.jpg`
