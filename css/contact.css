@@ -2,7 +2,7 @@
 
 #contact {
     width: 80%;
-    margin: 23vh auto; 
+    margin: 15vh auto; 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
