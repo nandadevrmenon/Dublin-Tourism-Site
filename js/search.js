@@ -5,7 +5,6 @@ const cardsContainer = document.querySelector(".cards_container");
 
 
 const cardNodes = cardsContainer.childNodes;
-console.log(cardNodes);
 
 
 const cards =[];
@@ -16,8 +15,6 @@ for(let i = 0; i <cardNodes.length ; i++){
     cards.push({ name : cardName, element :card});
 }
 
-
-console.log(cards);
 
 
 
