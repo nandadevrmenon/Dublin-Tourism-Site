@@ -51,7 +51,7 @@
             </nav>
 
             <main>
-                <div id="attractions_banner">
+                <div id="attractions_banner" class="banner">
                         <h1> Visitor Attractions </h1>
                         <a class="move_down_btn" href="pages/attractions.html#search"> <img width="50px" src="images/down arrow.svg" fill="white"></a>
                 </div>
@@ -59,10 +59,13 @@
                
                 <div id="search">
                     <h1>Visitor Attractions in Dublin</h1>
-                    <form>
+                    <form  onsubmit="return false;">
                         <input type="text" placeholder="Search">
                     </form>
                     <div id="attractions" class="cards_container"></div>
+                </div>
+                <div id="back_to_top">
+                    &#11014;
                 </div>
             </main>
 
@@ -99,5 +102,6 @@
         <script src="js/header.js"></script>
         <script src="js/attractions.js"></script>
         <script src="js/search.js"></script>
+        <script src="js/back_to_top.js"></script>
     </body>
 </html>
