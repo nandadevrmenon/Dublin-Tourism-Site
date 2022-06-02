@@ -53,6 +53,7 @@
 
 #contact #form div:last-child button {
     display: inline-block;
+    padding: 0 1em;
     width: 5em;
 }
 
