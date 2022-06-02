@@ -2,6 +2,9 @@
 @import 'buttons.css';
 @import 'general_page.css';
 @import 'article_page.css';
+@import 'legal.css';
+@import 'contact.css';
+@import 'tips.css';
 
 /* to disable horizontal scrolling */
 html, body {
@@ -207,9 +210,6 @@ header nav{
     margin-bottom: 4em;
     opacity: 0;
     transition: 300ms;
-    /* it overlaps with the sticky nav otherwise */
-    position: relative;
-    z-index: -1; 
     text-align: justify;
 }
 
@@ -390,9 +390,6 @@ fill:white;
       text-align: center;
     }
 
-    /* jhbjhbjbjhbjbjbjbjbbjbjbjbjhbjbjhbjhb */
-
-
 
     #home_page > main > section:first-child{
       margin-top:20vh;
@@ -530,30 +527,4 @@ fill:white;
     footer > .footer_links ul li {
         margin-bottom: 1em;
     }
-}
-
-#legal_page {
-    margin-top: 15vh;
-}
-
-#legal_page section:first-child {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}
-
-#legal_page section article {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}
-
-#legal_page section p {
-    width: 80%;
-}
-
-#legal_page section :where(p, ul li) a {
-    text-decoration: none;
-    font-weight: bold;
-    color: inherit;
 }

@@ -1,0 +1,26 @@
+#travel_tips {
+    margin-top: 15vh;
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+#travel_tips h2 {
+    font-size: 2.1rem;
+}
+
+#travel_tips section:first-child div {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--page-dark-green);
+    border-radius: 2em;
+    padding: 2em;
+}
+
+#travel_tips #tips {
+    margin-top: 2em;
+}
+
+
