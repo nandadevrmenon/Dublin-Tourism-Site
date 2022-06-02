@@ -1,3 +1,5 @@
+@import 'colors.css';
+
 #travel_tips {
     margin-top: 15vh;
     font-size: 1.3rem;
@@ -12,6 +14,7 @@
     width: 50%;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     border: 2px solid var(--page-dark-green);
@@ -25,9 +28,13 @@
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 1em;
+    background-color: var(--page-light-green);
+    padding: .5em;
+    border-radius: 2em;
 }
 
 #travel_tips #tips article {
+    opacity: 0.8;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -36,7 +43,7 @@
     justify-content: center;
     padding: 1em;
     border-radius: 1em;
-    color: white;
+    color: #fff;
 }
 
 #travel_tips #tips article:first-child {
@@ -75,7 +82,29 @@
 }
 
 
+@media screen and (max-width: 1300px) {
+    #travel_tips #tips {
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #travel_tips {
+        font-size: 1rem;
+    }
+
+    #travel_tips h2 {
+        font-size: 1.5rem;
+    }
 
 
+    #travel_tips section:first-child div {
+        width: 80%;
+    }
 
-
+    #travel_tips #tips {
+        width: 95%;
+    }
+}

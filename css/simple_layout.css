@@ -1,0 +1,57 @@
+#simple_layout {
+    margin-top: 15vh;
+    font-family: "Basic",sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+#simple_layout h2 {
+  font-size: 2.1rem;
+}
+
+#simple_layout section:first-child {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+#simple_layout section article {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+#simple_layout section p {
+    width: 80%;
+}
+
+#simple_layout section :where(p, ul li) a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+
+@media screen and (max-width: 1300px) {
+    #simple_layout section p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #simple_layout {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    #simple_layout h2 {
+        font-size: 1.5rem;
+    }
+
+    #simple_layout section:first-child {
+        width: 90%;
+    }
+    #simple_layout section article {
+        width: 90%;
+    }
+}
