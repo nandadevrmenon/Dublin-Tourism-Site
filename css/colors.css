@@ -17,21 +17,17 @@
 
 
 :root {
-  --page-green: #1ea873;
-  --page-font-green:#01291a;
-  --page-link-green:#00804d;
-  --page-light-green:#90bdaa;
-  --page-button-green:#eaffee;
-  --page-white: #fff;
-  --page-orange:#ffa557;
-  --page-black :#000;
-  --page-yellow:#EDB230;
-  --page-pastel-green:#b3e1cf;
-  --page-dark-green:#01140d;
-  --page-font-pink:#2f0317;
+  --page-green:           #1ea873;
+  --page-font-green:      #01291a;
+  --page-link-green:      #00804d;
+  --page-light-green:     #90bdaa;
+  --page-button-green:    #eaffee;
+  --page-yellow:          #EDB230;
+  --page-pastel-green:    #b3e1cf;
+  --page-dark-green:      #01140d;
   --page-pastel-dark-green:#8ee0c1;
   --page-green-unselected:#638275;
-  --page-green-selected:#b7eed7;
+  --page-green-selected:  #b7eed7;
 
   --logo-font:"Maxi Round",cursive;
 }
