@@ -44,7 +44,13 @@
     padding: 1em;
     border-radius: 1em;
     color: #fff;
+    text-shadow: 1px 1px #000;
 }
+
+#travel_tips #tips a {
+    text-shadow: none;
+}
+
 
 #travel_tips #tips article:first-child {
     grid-column: 1/3;
