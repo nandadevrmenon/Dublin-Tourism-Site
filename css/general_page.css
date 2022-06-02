@@ -5,6 +5,7 @@
 
 #gen_page > main{
   top: 7vh;
+  padding-top: 7vh;
 }
 
 /* banner area  */
@@ -147,6 +148,8 @@ margin:0;
   padding:0;
   text-decoration: none;
   color: inherit;
+  display: inline-block;
+  position: relative;
 }
 
 #gen_page > main > div:nth-child(2) >div >section > p{
@@ -156,15 +159,28 @@ margin:0;
   text-align: justify;
 }
 
+
+#gen_page > main > div:nth-child(2) >div >section > a::after{
+  content : " ";
+  position:absolute;
+  height: 2px;
+  background-color:var(--page-dark-green);
+  top:34px;
+  left:-1px;
+  width:0;
+  transition: width 0.7s cubic-bezier(0.39, 0.67, 0, 0.99)
+}
+
+#gen_page > main > div:nth-child(2) >div >section > a:hover::after{
+  width:100%;
+}
+
 /* for food page since we have a few category buttons within the page */
 
 #gen_page > main > div:nth-child(2) > #foodnight{
   grid-row: 4/5;
 }
 
-#gen_page > main > div:nth-child(2) > #filter_btn{
-  display: none;
-}
 
 #gen_page > main > div:nth-child(2) > #tabs{
   width: 100%;
@@ -199,11 +215,9 @@ margin:0;
 }
 
 
+
 @media screen and (max-width: 1100px) {
 
-  #gen_page > main > div:first-child {
-    height:60vh;
-  } 
 
   #gen_page > main > div:first-child h1{
     font-family: "Koulen";
@@ -211,9 +225,6 @@ margin:0;
     font-size: 5rem;
     letter-spacing: 1px;
   }
-
-
-
 
 
   /* Search area */
@@ -255,7 +266,7 @@ margin:0;
   #gen_page > main > div:nth-child(2) >div >section > img{
     width: 100%;
   }
-  
+
   #gen_page > main > div:nth-child(2) >div >section > a {
     font-size: 1.5rem;
   }
@@ -264,15 +275,62 @@ margin:0;
     font-size: 1.2rem;
   }
 
+
+  #gen_page > main > div:nth-child(2) >div >section > a::after{
+    top:27px;
+  }
+
+
+  /* changes specifically for the food and nightlife page */
+  #gen_page > main > div:nth-child(2) > #tabs{
+    width: 100%;
+    margin-bottom:0;
+  }
+  
+  
+  #gen_page > main > div:nth-child(2) > #tabs ul{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content:space-around;
+    margin:0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  #gen_page > main > div:nth-child(2) > #tabs ul li{
+    background-color: var(--page-green-unselected);
+    margin-top: 1.5rem;
+    padding:1rem;
+    font-size: 1.1rem;
+    border-radius: 12px;
+  }
+  
+  
+  #gen_page > main > div:nth-child(2) > #tabs ul li.selected{
+    background-color: var(--page-green-selected);
+    font-size: 1.1rem;
+    transition: 0.35s ease-in-out;
+  }
+  
+
 }
 
 
 
 @media screen and (max-width: 700px) {
 
+  #gen_page > main > div:first-child {
+    height:60vh;
+  } 
+
   #gen_page > main > div:first-child h1{
     padding-top: 13rem;
     font-size: 3.5rem;
+  }
+
+  #gen_page > main > div:first-child a img{
+    display: none;
   }
 
 
@@ -297,14 +355,21 @@ margin:0;
     font-size: 2rem;
     margin: 0 auto;
   }
+
+  #gen_page > main > div:nth-child(2) >div >section > a >h3{
+    font-size: 1.6rem;
+  }
   
   #gen_page > main > div:nth-child(2) >div >section > p{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     grid-column: 1/4;
     grid-row:3/4;
     margin: 0 auto;
   }
 
+  #gen_page > main > div:nth-child(2) >div >section > a::after{
+    top:26px;
+  }
 
 }
 
