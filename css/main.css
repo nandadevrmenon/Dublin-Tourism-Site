@@ -531,6 +531,13 @@ fill:white;
 
 #legal_page {
     margin-top: 15vh;
+    font-family: "Basic",sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+#legal_page h2 {
+  font-size: 2.1rem;
 }
 
 #legal_page section:first-child {
