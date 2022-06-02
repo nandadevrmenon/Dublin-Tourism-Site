@@ -19,7 +19,7 @@ tips.forEach(entry => {
     const anchor = document.createElement('a');
     const span = document.createElement('span');
 
-    imgContainer.style.backgroundImage=`images/tips/${entry["id"]}.jpg`;
+    imgContainer.style.backgroundImage=`url(images/tips/${entry["id"]}.jpg)`;
     h3.textContent = entry["title"];
     p.textContent = entry["desc"];
     span.innerHTML = "&#187;"
