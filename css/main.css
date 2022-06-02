@@ -2,6 +2,8 @@
 @import 'buttons.css';
 @import 'general_page.css';
 @import 'article_page.css';
+@import 'legal.css';
+@import 'contact.css';
 
 /* to disable horizontal scrolling */
 html, body {
@@ -387,9 +389,6 @@ fill:white;
       text-align: center;
     }
 
-    /* jhbjhbjbjhbjbjbjbjbbjbjbjbjhbjbjhbjhb */
-
-
 
     #home_page > main > section:first-child{
       margin-top:20vh;
@@ -527,37 +526,4 @@ fill:white;
     footer > .footer_links ul li {
         margin-bottom: 1em;
     }
-}
-
-#legal_page {
-    margin-top: 15vh;
-    font-family: "Basic",sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.8;
-}
-
-#legal_page h2 {
-  font-size: 2.1rem;
-}
-
-#legal_page section:first-child {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}
-
-#legal_page section article {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}
-
-#legal_page section p {
-    width: 80%;
-}
-
-#legal_page section :where(p, ul li) a {
-    text-decoration: none;
-    font-weight: bold;
-    color: inherit;
 }
