@@ -18,7 +18,7 @@
   background-color: var(--page-light-green);
   border-radius: 12px;
   box-shadow: 5px 5px 20px -9px black;
-  margin-top:3rem;
+  margin:3rem 0;
 }
 
 #abt_devs > div > section:first-child{
