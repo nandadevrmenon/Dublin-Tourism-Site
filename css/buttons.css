@@ -28,7 +28,7 @@
 }
 
 .styled_btn:hover {
-    background: var(--page-green);
+    background: var(--page-button-green);
     color: var(--page-dark-green);
 }
 
