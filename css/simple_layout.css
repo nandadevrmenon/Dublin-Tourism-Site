@@ -9,6 +9,12 @@
   font-size: 2.1rem;
 }
 
+#simple_layout img{
+    display: block;
+    width:70%;
+    border-radius: 10px;
+}
+
 #simple_layout section:first-child {
     width: 80%;
     margin: 0 auto;
@@ -27,10 +33,31 @@
 
 #simple_layout section :where(p, ul li) a {
     text-decoration: none;
-    font-weight: bold;
-    color: inherit;
 }
 
+
+#simple_layout a{
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    color: var(--page-link-green);
+  }
+  
+  
+  #simple_layout a::after{
+    content : " ";
+    position:absolute;
+    height: 2px;
+    background-color:var(--page-dark-green);
+    top:25px;
+    left:-1px;
+    width:0;
+    transition: width 0.7s cubic-bezier(0.39, 0.67, 0, 0.99)
+  }
+  
+  #simple_layout a:hover::after{
+    width:100%;
+  }
 
 @media screen and (max-width: 1300px) {
     #simple_layout section p {
