@@ -11,6 +11,10 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+  
+p{
+  font-family: "Basic",sans-serif;
+}
 
 body{
   margin:0;
@@ -273,7 +277,7 @@ footer{
   font-family: "Nunito",sans-serif;
   padding: 1rem;
   background-color: var(--page-dark-green);
-  color:var(--page-white);
+  color:#fff;
 }
 
 .footer_nav{
@@ -447,6 +451,10 @@ fill:white;
 
     #home_page > main section:last-child > article:nth-child(even) {
         transform: translateX(0);
+    }
+
+    #home_page > main section:last-child > article{
+      padding:0;
     }
 
     #home_page > main section:last-child > article h2 {
