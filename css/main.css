@@ -4,6 +4,7 @@
 @import 'simple_layout.css';
 @import 'contact.css';
 @import 'tips.css';
+@import 'about_developers.css';
 
 /* to disable horizontal scrolling */
 html, body {

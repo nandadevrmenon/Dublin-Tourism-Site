@@ -1,0 +1,91 @@
+@import 'colors.css';
+
+
+
+
+#abt_devs{
+  font-family: "Basic",sans-serif;
+  margin:0 auto;
+  width:60%;
+  margin-top: 9em;
+  min-height: 110vh;
+}
+
+#abt_devs > div{
+  display:grid;
+  grid-template-columns: repeat(7,1fr);
+  gap:1rem;
+  background-color: var(--page-light-green);
+  border-radius: 12px;
+  box-shadow: 5px 5px 20px -9px black;
+  margin-top:3rem;
+}
+
+#abt_devs > div > section:first-child{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  grid-column: 1/4;
+}
+
+#abt_devs > div > section:first-child >img{
+  border-radius: 12px;
+  box-shadow: 5px 5px 20px -9px black;
+  width: 70%;
+}
+
+#abt_devs > div > section:nth-child(2){
+  grid-column: 4/8;
+  grid-row:1/2;
+  padding:0 2rem;
+  margin-top:2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+#abt_devs > div > section:nth-child(2) h3{
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+#abt_devs > div > section:nth-child(2) p{
+  font-size: 1.3rem;
+}
+
+#abt_devs .styled_btn{
+  font-size: 1rem;
+}
+
+
+#abt_devs > div > section:nth-child(3){
+  max-height:0 ;
+  overflow-y: hidden;
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: center;
+  grid-column: 1/8;
+  transition: all 0.3s ease-in-out;
+}
+
+#abt_devs > div > section:nth-child(3).show{
+  max-height: 100rem;
+}
+
+#abt_devs > div > section:nth-child(3) h3{
+  padding: 0 1.5rem;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+#abt_devs > div > section:nth-child(3)>ul{
+  display: block;
+  padding-right: 1.5rem;
+}
+
+#abt_devs > div > section:nth-child(3) > ul >li{
+  font-size:1.5rem;
+}
+
