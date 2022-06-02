@@ -1,6 +1,7 @@
 @import 'colors.css';
 
 .styled_btn {
+    font-style: 'Basic';
     display: inline-block;
     background: var(--page-font-green);
     border: 0;
