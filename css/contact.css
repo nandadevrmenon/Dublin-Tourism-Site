@@ -1,6 +1,7 @@
 @import './colors.css';
 
 #contact {
+    font-family: "Basic",Helvetica,sans-serif;
     width: 80%;
     margin: 15vh auto; 
     display: grid;

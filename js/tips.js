@@ -1,6 +1,6 @@
 'use strict'
 
-const section = document.querySelector('#travel_tips #tips');
+const section = document.querySelector("#tips");
 const tips = [
     { "id": 0, "title": "The Stops on the Dublin Coastal Trail", "desc": "Dublin's a city by the sea, and the Dublin Coastal Trail makes it easy to explore our seaside towns. Here are 11 stops worth diving into including the best beach walks in Dublin.", "page": "coastal_trail.html" },
     { "id": 1, "title": "Discover the Best Dublin Staycation Deals", "desc": "You might be busy delving into 'things to do' articles, booking attractions and dreaming of Dublin activities to try on an upcoming visit, but first things first — where to stay on your getaway? You're spoilt for choice.", "page": "staycation_deals.html" },
@@ -19,7 +19,7 @@ tips.forEach(entry => {
     const anchor = document.createElement('a');
     const span = document.createElement('span');
 
-    imgContainer.style.backgroundImage=`url(images/tips/${entry["id"]}.jpg)`;
+    // imgContainer.style.backgroundImage=`url(images/tips/${entry["id"]}.jpg)`;
     h3.textContent = entry["title"];
     p.textContent = entry["desc"];
     span.innerHTML = "&#187;"

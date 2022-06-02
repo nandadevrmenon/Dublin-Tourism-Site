@@ -36,7 +36,7 @@
 }
 
 #gen_page > main > #attractions_banner{
-  background-image: url("../images/attractions.webp");
+  background-image: url("../images/attractions.jpg");
 }
 
 #gen_page > main > #getting_around_banner{
@@ -51,6 +51,10 @@
   background-image: url("../images/food_banner.jpg");
   background-position: center;
   color:rgb(255, 255, 255);
+}
+
+#gen_page > main > #tips_banner{
+  background-image: url("../images/tips.jpg");
 }
 
 
