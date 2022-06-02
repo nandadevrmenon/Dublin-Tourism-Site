@@ -4,8 +4,8 @@
 
 
 #gen_page > main{
-  top: 7vh;
   padding-top: 7vh;
+  position:relative;
 }
 
 /* banner area  */

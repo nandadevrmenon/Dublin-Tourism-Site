@@ -51,3 +51,25 @@
     color:#fff;
     height:50px;
 }
+
+
+
+#back_to_top{
+    font-size: 2rem;
+    background-color: var(--page-button-green);
+    position:fixed;
+    bottom:2rem;
+    right:-5rem;
+    padding:0.6rem 1rem;
+    border-radius: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+#back_to_top.is_active{
+    right: 2rem;
+}
+
+
+#back_to_top.is_active.move_up{
+    bottom: 15rem;
+}
