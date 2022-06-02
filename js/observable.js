@@ -29,8 +29,8 @@ const defaultLayout = () => {
     articles.forEach((article, index) => {
         const header = article.children[0];
         const p1 = article.children[1];
-        const p2 = article.children[3];
-        const figure = article.children[2];
+        const p2 = article.children[2];
+        const figure = article.children[3];
         const button = article.children[4];
         const div = document.createElement('div');
         const newArticle = document.createElement('article');
@@ -57,7 +57,7 @@ const smallLayout = () => {
             const button = article.children[1].children[3];
             const figure = article.children[0];
             article.innerHTML = '';
-            article.append(header, p1, figure, p2, button);
+            article.append(header, p1, p2, figure, button);
         }
         else {
             const header = article.children[0].children[0];
@@ -66,7 +66,7 @@ const smallLayout = () => {
             const button = article.children[0].children[3];
             const figure = article.children[1];
             article.innerHTML = '';
-            article.append(header, p1, figure, p2, button);
+            article.append(header, p1, p2, figure, button);
         }
     });
     layout = "small";
