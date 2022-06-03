@@ -1,3 +1,5 @@
+@import 'colors.css';
+
 #thingsTodo {
     margin-top: 15vh;
     font-size: 1.3rem;
@@ -11,6 +13,14 @@
     text-decoration: none;
     color: inherit;
     font-weight: bold;
+}
+
+#thingsTodo a.styled_btn {
+    color: var(--page-pastel-green);
+}
+
+#thingsTodo a.styled_btn:hover {
+    color: var(--page-dark-green);
 }
 
 #thingsTodo section {
@@ -31,16 +41,27 @@
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 1em;
     max-height: 630px;
-    border: 2px solid #000;
+    border: 2px solid var(--page-dark-green);
     border-radius: 1em;
     padding: 1em;
     margin-bottom: 1em;
+    background-color: var(--page-light-green);
 }
 
 #thingsTodo section > div:last-child div {
     min-width: 300px;
     min-height: 300px;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#thingsTodo section > div:last-child div p {
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    text-align: center;
 }
 
 #thingsTodo section > div:last-child div:first-child {
@@ -70,6 +91,16 @@
     #thingsTodo section > div:last-child div:last-child {
         grid-column: 1/3;
         grid-row: 3/5;
+    }
+
+    #thingsTodo section > div:first-child {
+        width: 80%;
+    }
+
+    #thingsTodo .styled_btn {
+        margin-left: 1em;
+        max-height: 2.5em;
+        overflow: hidden;
     }
 }
 
