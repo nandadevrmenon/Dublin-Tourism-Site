@@ -154,6 +154,10 @@
     color: var(--page-dark-green);
 }
 
+div label input{
+    font-size: 1em;
+}
+
 @media screen and (max-width: 1300px) {
     #contact {
         width: 100%;
